@@ -1,10 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
+import useScrollLimit from 'src/hooks/useScrollLimit';
 
 const Header = () => {
+  const isScrolled = useScrollLimit(80);
+
   return (
-    <header className="py-4 mx-12">
-      <div className="flex justify-between">
+    <header className={`${isScrolled && 'bg-[#141414]'}`}>
+      <div className="w-full flex justify-between">
         <div>
           <Image width={100} height={100} src={'/Netflix.svg'} alt="Logo" />
         </div>
