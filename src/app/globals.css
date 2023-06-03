@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-red-600 overflow-x-hidden;
+  }
+
+  header {
+    @apply fixed top-0 z-50 flex w-full items-center justify-between px-4 py-4 transition-all duration-200 ease-out lg:px-10 lg:py-6;
+  }
+}
+
+@layer components {
+  .play-button {
+    @apply flex items-center justify-center px-8 h-12 bg-red-600 rounded-sm  cursor-pointer transition-all 
+      hover:scale-105;
+  }
+}
+
+.mask-image {
+  mask-image: linear-gradient(180deg, #141414 36%, transparent);
+}
